@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yerro Books — Julie Brandt</title>
+    <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/navigation.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/projects.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <a href="../../index.html" class="nav-brand">
+        <div class="nav-logo-mark">
+          <img
+            src="../../assets/logos/Logo-NoName.png"
+            alt="Geometric J Logo Design"
+          />
+        </div>
+        <span class="nav-logo">Julie Brandt</span>
+      </a>
+      <div class="nav-links">
+        <a href="../../index.html" id="nav-works" class="active-link">Works</a>
+        <a href="../about.html" id="nav-about">About</a>
+      </div>
+    </nav>
+
+    <div class="project-hero">
+      <a href="/index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path
+            d="M10 3L5 8l5 5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        All works
+      </a>
+
+      <img
+        src="/assets/project-images/yerro-books/yerroBooksCoverLarge.png"
+        alt="Soluna Rebrand hero"
+      />
+    </div>
+    <aside class="project-overview">
+      <p class="overview-label">Overview</p>
+      <div class="overview-fields">
+        <div class="overview-item">
+          <p class="overview-item-key">Year</p>
+          <p class="overview-item-val">Summer 2026</p>
+        </div>
+        <div class="overview-item">
+          <p class="overview-item-key">Type</p>
+          <p class="overview-item-val">Editorial & Graphic Design</p>
+        </div>
+        <div class="overview-item">
+          <p class="overview-item-key">Tools</p>
+          <p class="overview-item-val">
+            Illustrator, Photoshop, Various AI Platforms
+          </p>
+        </div>
+      </div>
+      <p class="overview-desc">
+        During my internship at Yerro Books, I explored whether it was possible
+        to implement AI into the workflow of designing book covers. I created
+        several book covers with varying genres to test the limitations and
+        strengths of platforms such as ChatGPT, Gemini, and Adobe Firefly.
+      </p>
+    </aside>
+    <div class="project-content">
+      <nav class="project-toc" aria-label="Table of contents">
+        <p class="toc-label">Contents</p>
+        <button class="toc-link" onclick="scrollToSection('pa-title')">
+          AI Workflow
+        </button>
+        <button class="toc-link" onclick="scrollToSection('pa-research')">
+          Research
+        </button>
+        <button class="toc-link" onclick="scrollToSection('pa-process')">
+          Process
+        </button>
+        <button class="toc-link" onclick="scrollToSection('pa-outcome')">
+          Conclusion
+        </button>
+      </nav>
+      <div class="project-main-content">
+        <h1 class="project-title" id="pa-title">AI <em>Workflow</em></h1>
+        <div class="project-body">
+          <p>
+            I began by developing our guiding question: How might we create a
+            system that aids in the process of designing editorial covers using
+            AI by conceptualizing ideas through written text while always
+            maintaining professional standards of originality, visual quality,
+            and legal safety regarding copyright and plagiarism?
+          </p>
+          <h3 id="pa-research">Research</h3>
+          <p>
+            Existing research suggests AI is most effective as an ideation tool
+            rather than a replacement for the design process. While it can
+            quickly generate concepts, it often lacks originality, creative
+            reasoning, and reliable attribution, raising ethical concerns around
+            plagiarism and ownership. This informed our goal of testing where AI
+            could responsibly fit within a designer's workflow.
+          </p>
+          <h3 id="pa-process">Process</h3>
+          <p>
+            To evaluate AI's role in book cover design, we created four
+            fictional books across the genres of romance, dark fantasy, science
+            fiction, and fairytale fantasy. Each concept was developed using
+            structured prompts that included the title, author, genre, and
+            synopsis.
+          </p>
+          <p>
+            Our workflow moved through three stages: research, concept
+            development, and image generation. To encourage ethical outputs,
+            prompts included constraints such as avoiding named artists,
+            copyrighted properties, and unattributed references.
+          </p>
+          <p>
+            While AI generated convincing visuals, many concepts closely
+            resembled existing book covers, making originality difficult to
+            verify. This led us to reconsider AI's role in the creative process.
+          </p>
+          <p>
+            Rather than asking AI to generate original concepts, we shifted to a
+            designer led workflow. We began with hand-drawn sketches, then used
+            AI to visualize our ideas before refining the final designs
+            ourselves. This approach maintained creative authorship while using
+            AI to support visualization, typography, and color exploration.
+          </p>
+          <h3 id="pa-outcome">Conclusion</h3>
+          <p>
+            Our testing showed that AI is most valuable as a research and
+            visualization tool rather than a source of original design concepts.
+            By establishing clear ethical constraints and beginning with
+            designer created ideas, AI became a collaborative tool that
+            supported the design process without replacing it.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="project-images">
+      <div class="img-row cols-3">
+        <div class="img-block portrait">
+          <img
+            src="/assets/project-images/yerro-books/initalsketch.png"
+            alt=""
+          />
+        </div>
+        <div class="img-block landscape span-two-columns">
+          <img src="/assets/project-images/yerro-books/aigen.png" alt="" />
+        </div>
+      </div>
+      <div class="img-row cols-1">
+        <div class="img-block landscape auto">
+          <img src="/assets/project-images/yerro-books/sketch.png" alt="" />
+        </div>
+      </div>
+      <div class="img-row cols-3">
+        <div class="img-block portrait">
+          <img
+            src="/assets/project-images/yerro-books/PXL_20260713_140337106.PORTRAIT.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-block portrait">
+          <img
+            src="/assets/project-images/yerro-books/PXL_20260701_123458369.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-block portrait">
+          <img
+            src="/assets/project-images/yerro-books/PXL_20260701_122735652.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        <div class="footer-logo-wrap">
+          <img
+            src="../../assets/logos/Logo.png"
+            alt="Geometric J Logo with Julie Brandt"
+          />
+        </div>
+        <div class="footer-socials">
+          <a
+            href="https://instagram.com/yourhandle"
+            target="_blank"
+            rel="noopener"
+            class="footer-social-link"
+            aria-label="Instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            rel="noopener"
+            class="footer-social-link"
+            aria-label="LinkedIn"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-fun">
+        <a href="../photography.html" class="btn-ghost">Photography</a>
+        <a href="../art.html" class="btn-ghost">Art</a>
+      </div>
+    </footer>
+
+    <script src="../../js/main.js" defer></script>
+    <script src="../../js/navigation.js" defer></script>
+    <script src="../../js/project-navigation.js" defer></script>
+  </body>
+</html>

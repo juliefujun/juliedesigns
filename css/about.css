@@ -1,0 +1,143 @@
+/* ─── About page ─── */
+
+.about-content {
+        padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem) 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(3rem, 6vw, 6rem);
+        align-items: start;
+      }
+      .about-image-wrap {
+        aspect-ratio: 3/4;
+        background: var(--stone);
+        border-radius: var(--r);
+        overflow: hidden;
+        position: sticky;
+        top: 80px;
+      }
+      .about-text {
+        min-width: 0;
+      }
+      .about-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--sand);
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+      .about-title {
+        font-family: var(--serif);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 300;
+        line-height: 1.05;
+        margin-bottom: 2rem;
+      }
+      .about-title em {
+        font-style: italic;
+        color: var(--ink-light);
+      }
+      .about-body {
+        font-size: 1rem;
+        line-height: 1.85;
+        color: var(--ink-light);
+      }
+      .about-body p {
+        margin-bottom: 1.2rem;
+      }
+      .about-skills {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .skill-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--stone-mid);
+        padding: 0.4rem 0.9rem;
+        border-radius: 99px;
+        color: var(--ink-light);
+        font-weight: 400;
+      }
+
+.about-resume {
+        margin-top: 2rem;
+      }
+      .btn-resume {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: var(--sans);
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 500;
+        background: var(--ink);
+        color: var(--bg);
+        padding: 0.75rem 1.5rem;
+        border-radius: 99px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+          background 0.2s var(--ease),
+          transform 0.2s var(--ease);
+      }
+      .btn-resume:hover {
+        background: #2e2b26;
+        transform: translateY(-1px);
+      }
+      .btn-resume svg {
+        flex-shrink: 0;
+      }
+
+.about-contact {
+        margin-top: 1.75rem;
+        padding-top: 1.75rem;
+        border-top: 1px solid var(--stone);
+      }
+      .about-contact-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--sand);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+      .about-email-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.95rem;
+        color: var(--ink);
+        font-weight: 400;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .about-email-link:hover {
+        color: var(--ink);
+      }
+      .about-email-text {
+        border-bottom: 1px solid var(--stone-mid);
+        padding-bottom: 2px;
+        transition: border-color 0.2s;
+      }
+      .about-email-link:hover .about-email-text {
+        border-color: var(--sand);
+      }
+      .about-email-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: var(--stone);
+        border-radius: 50%;
+        flex-shrink: 0;
+        color: var(--ink-light);
+        transition: background 0.2s;
+      }
+      .about-email-link:hover .about-email-icon {
+        background: var(--stone-mid);
+      }
