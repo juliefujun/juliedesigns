@@ -6,6 +6,9 @@
       .project-page {
         padding: 0;
       }
+      .project-intro {
+        display: block;
+      }
       .project-hero {
         width: 100%;
         aspect-ratio: 21/9;
@@ -300,4 +303,174 @@
       }
       .inline-back-btn:hover svg {
         transform: translateX(-3px);
+      }
+
+      /* ─── Responsive project layout ────────────────────────────
+         Portrait pages read as one vertical sequence. Landscape
+         screens have enough horizontal room for the contents rail and
+         project copy to sit beside each other again. */
+      @media (max-width: 900px) and (orientation: portrait) {
+        .project-intro {
+          display: block;
+        }
+
+        .project-hero {
+          aspect-ratio: 4 / 3;
+        }
+
+        .project-overview {
+          display: block;
+          padding: 1.75rem 1.25rem 2rem;
+        }
+
+        .overview-label {
+          margin-bottom: 1.25rem;
+        }
+
+        .overview-fields {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.85rem;
+          width: 100%;
+        }
+
+        .overview-item,
+        .overview-item:last-of-type {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+
+        .overview-item-val {
+          white-space: normal;
+        }
+
+        .overview-desc {
+          display: block;
+          width: 100%;
+          max-width: none;
+          margin: 1.5rem 0 0;
+          padding: 1.25rem 0 0;
+          border-top: 1px solid var(--stone);
+          border-left: 0;
+        }
+
+        .project-content {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+          padding: 2.5rem 1.25rem 3.5rem;
+        }
+
+        .project-toc {
+          position: static;
+          width: 100%;
+          max-width: none;
+          order: 0;
+        }
+
+        .project-main-content {
+          width: 100%;
+          order: 1;
+        }
+
+        .project-title {
+          font-size: clamp(2.35rem, 10vw, 3.5rem);
+        }
+
+        .project-body {
+          font-size: 1rem;
+          line-height: 1.75;
+        }
+
+        .project-images {
+          padding: 0 1.25rem 2rem;
+        }
+      }
+
+      @media (max-width: 1200px) and (orientation: landscape) {
+        .project-intro {
+          display: block;
+        }
+
+        .project-intro .project-hero {
+          height: clamp(280px, 40vw, 440px);
+          min-height: 0;
+          aspect-ratio: auto;
+        }
+
+        .project-intro .project-overview {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+          column-gap: 0;
+          align-items: start;
+          min-width: 0;
+          padding: 1.5rem clamp(1.25rem, 5vw, 3rem) 1.75rem;
+        }
+
+        .project-intro .overview-label {
+          grid-column: 1 / -1;
+          margin-bottom: 1.1rem;
+        }
+
+        .project-intro .overview-fields {
+          grid-column: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.75rem;
+          width: 100%;
+          min-width: 0;
+        }
+
+        .project-intro .overview-item,
+        .project-intro .overview-item:last-of-type {
+          width: 100%;
+          min-width: 0;
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+
+        .project-intro .overview-item-val {
+          white-space: normal;
+          overflow-wrap: anywhere;
+        }
+
+        .project-intro .overview-desc {
+          grid-column: 2;
+          grid-row: 2;
+          margin: 0;
+          padding: 0 0 0 2rem;
+          border-top: 0;
+          border-left: 1px solid var(--stone);
+        }
+
+        .project-content {
+          grid-template-columns: minmax(9rem, 1fr) minmax(0, 2fr);
+          gap: 2rem;
+          padding: 2.5rem clamp(1.25rem, 5vw, 3rem) 3.5rem;
+        }
+
+        .project-toc {
+          position: sticky;
+          top: 80px;
+          width: 100%;
+          max-width: none;
+        }
+
+        .project-title {
+          font-size: clamp(2.25rem, 6vw, 3.5rem);
+        }
+
+        .project-body {
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+
+        .project-images {
+          padding: 0 clamp(1.25rem, 5vw, 3rem) 2rem;
+        }
       }
