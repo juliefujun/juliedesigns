@@ -109,14 +109,14 @@
         font-size: 0.75rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--sand);
+        color: var(--toc-label);
         font-weight: 500;
         margin-bottom: 0.6rem;
         padding: 0 1.25rem 0.25rem;
         /* border-bottom: 1px solid var(--stone-mid); */
         white-space: nowrap;
         text-decoration: underline;
-        text-decoration-color: var(--sand);
+        text-decoration-color: var(--toc-label);
         text-decoration-thickness: 2px;
         text-underline-offset: 6px;
       }
@@ -141,8 +141,9 @@
         margin-top: 0.25rem;
       }
       .toc-link:hover,
+      .toc-link:focus-visible,
       .toc-link.toc-active {
-        background: var(--stone-mid);
+        background: var(--toc-hover);
         color: var(--ink);
       }
 
@@ -181,8 +182,14 @@
         padding-left: 30px; /* Adjust number to increase or decrease space */
         line-height: 1.85;
       }
-      a.lorax {
+      .project-body a {
+        color: var(--accent);
         text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .project-body a:hover {
+        color: var(--ink);
+        text-decoration-thickness: 2px;
       }
 
       /* Project image blocks */
@@ -216,6 +223,12 @@
       }
       .img-block.landscape {
         aspect-ratio: 16/9;
+      }
+      .project-video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
        .img-block.landscape.span-two-columns  {
         grid-column: span 2;
@@ -256,19 +269,19 @@
         font-weight: 500;
         font-family: var(--sans);
         cursor: pointer;
-        border: none;
-        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid var(--accent);
+        background: var(--stone-light);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         border-radius: 99px;
         padding: 0.5rem 1rem 0.5rem 0.75rem;
-        color: #fff; /* JS will override per-image */
+        color: var(--ink);
         transition:
           background 0.2s,
           color 0.2s;
       }
       .back-btn:hover {
-        background: rgba(255, 255, 255, 0.32);
+        background: var(--surface-hover);
       }
       .back-btn svg {
         transition: transform 0.2s var(--ease);

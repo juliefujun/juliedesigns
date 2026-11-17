@@ -52,7 +52,7 @@
         }
       }
       .hero-sub {
-        font-size: 1rem;
+        font-size: 1.1rem;
         color: var(--ink-light);
         max-width: 40ch;
         line-height: 1.7;
@@ -67,7 +67,7 @@
         font-size: 0.7rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: var(--stone-mid);
+        color: var(--accent);
         margin-bottom: 2rem;
         font-weight: 500;
       }
@@ -76,20 +76,14 @@
         grid-template-columns: repeat(12, 1fr);
         gap: 1.5rem;
       }
-      /* Card spanning rules */
-      .work-card:nth-child(1) {
+      /* Explicit sizes preserve each project's layout when new cards are added. */
+      .work-card--wide {
         grid-column: span 7;
       }
-      .work-card:nth-child(2) {
+      .work-card--narrow {
         grid-column: span 5;
       }
-      .work-card:nth-child(3) {
-        grid-column: span 5;
-      }
-      .work-card:nth-child(4) {
-        grid-column: span 7;
-      }
-      .work-card:nth-child(n + 5) {
+      .work-card--half {
         grid-column: span 6;
       }
 
@@ -105,8 +99,8 @@
         overflow: hidden;
         position: relative;
       }
-      .work-card:nth-child(1) .card-img-wrap,
-      .work-card:nth-child(4) .card-img-wrap {
+      .work-card--wide .card-img-wrap,
+      .work-card--compact .card-img-wrap {
         aspect-ratio: 16/9;
       }
       .card-img-wrap img {
@@ -136,7 +130,7 @@
         font-size: 0.6rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        color: var(--stone-mid);
+        color: var(--accent);
         font-weight: 500;
         margin-bottom: 0.2rem;
       }

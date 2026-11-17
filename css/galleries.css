@@ -1,7 +1,7 @@
-/* ─── Photography & Art galleries ─── */
+/* ─── Photography & Playground galleries ─── */
 
 /* ═══════════════════════════════════════════════════════════
-       FUN WORKS (Photography / Art)
+       FUN WORKS (Photography / Playground)
     ═══════════════════════════════════════════════════════════ */
       .fun-header {
         padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem) 2rem;
@@ -53,3 +53,80 @@
       .masonry-item.square img {
         aspect-ratio: 1/1;
       }
+
+/* Playground: equal image tiles with captions revealed on hover or focus. */
+.playground-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 1rem clamp(1.5rem, 5vw, 4rem) 4rem;
+}
+.playground-card {
+  display: block;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--r);
+  background: var(--stone);
+}
+.playground-card img {
+  transition: transform 0.5s var(--ease);
+}
+.playground-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  color: var(--white);
+  background: linear-gradient(180deg, var(--image-scrim), rgba(26, 24, 20, 0.92));
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.playground-meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.playground-card-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.playground-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 40ch;
+}
+.playground-card:hover .playground-caption,
+.playground-card:focus-visible .playground-caption {
+  opacity: 1;
+}
+.playground-card:hover img,
+.playground-card:focus-visible img {
+  transform: scale(1.04);
+}
+.playground-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .playground-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .playground-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .playground-caption {
+    opacity: 1;
+  }
+}
