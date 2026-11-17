@@ -84,3 +84,23 @@
       .nav-links a.active-link::after {
         width: 100%;
       }
+
+@media (max-width: 600px) {
+  #nav {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .nav-brand {
+    gap: 0.5rem;
+  }
+  .nav-logo-mark {
+    width: 28px;
+    height: 28px;
+  }
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}

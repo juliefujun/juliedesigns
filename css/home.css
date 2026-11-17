@@ -73,7 +73,7 @@
       }
       .works-grid {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(12, minmax(0, 1fr));
         gap: 1.5rem;
       }
       /* Explicit sizes preserve each project's layout when new cards are added. */
@@ -88,6 +88,7 @@
       }
 
       .work-card {
+        min-width: 0;
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -145,3 +146,25 @@
         color: var(--ink-light);
         margin-top: 0.15rem;
       }
+
+/* Keep responsive rules after desktop rules so the grid has no extra columns. */
+@media (max-width: 900px) {
+  .works-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .works-grid .work-card {
+    grid-column: span 1;
+  }
+  .works-grid .work-card--featured {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px) {
+  .works-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+  .works-grid .work-card {
+    grid-column: span 1;
+  }
+}

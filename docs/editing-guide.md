@@ -20,6 +20,8 @@ portfolio/
 ### Home page works grid
 Open `index.html` and edit the `.works-grid` section. Each card is an `<a class="work-card">` linking to a project page.
 
+Keep homepage grid breakpoints at the end of `css/home.css`, after desktop rules: two columns below 900px and one below 600px. The featured card spans two columns only on tablets. Keep mobile header rules at the end of `css/navigation.css` so desktop styles cannot override them.
+
 ### Project pages
 Edit files in `pages/projects/`. Each project has:
 - `.project-hero` — hero image
@@ -49,7 +51,7 @@ The gallery uses three equal columns, two below 900px, and one below 600px. Capt
 | Headshots | `assets/headshots/` |
 | Resume PDF | `assets/resume/` |
 
-Update `src` paths in HTML to match. From `index.html` use `assets/...`. From `pages/` use `../assets/...`. From `pages/projects/` use `../../assets/...`.
+Update `src` paths in HTML to match. Avoid a leading `/` before `assets`: that points to the domain root and breaks when the site is hosted in a project subfolder such as `/juliedesigns/`. From `index.html` use `assets/...`. From `pages/` use `../assets/...`. From `pages/projects/` use `../../assets/...`.
 
 ## Styles
 
